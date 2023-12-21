@@ -1,0 +1,2 @@
+2023-12-18 01:39:54,319 WARNING      log      Forbidden (CSRF token from POST incorrect.): /accounts/login/
+2023-12-18 01:39:57,114 WARNING      log      Forbidden (CSRF token from POST incorrect.): /accounts/login/
