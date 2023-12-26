@@ -93,16 +93,8 @@ WSGI_APPLICATION = 'MAIN_SETTINGS.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'XXXX_test',
-        'USER': 'XXXX_default',
-        'PASSWORD': 'XXXXXXXXXXXXXX',
-        'HOST': 'localhost',
-        # 'PORT': '',
-        'OPTIONS': {
-             # включает стройги режим в БД
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
