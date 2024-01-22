@@ -1,0 +1,41 @@
+{% extends 'index/base/base.html' %}
+{% load static %}
+      
+{% block content %}      
+<div class="container">
+    <div class="card mt-5">
+        <div class="card-header">
+            {{ title }}
+        </div>
+        
+        <div class="card-body">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-rounded alert-{% if message.tags == 'error' %}danger{% else %}success{% endif %}" role="alert">
+						{{ message }}
+					</div>
+				<hr>
+                {% endfor %}
+            {% endif %}
+            
+            
+            {% if user.profile.email_confirm %}
+                <h3>Вы успешно подтвердили почту!</h3>
+            {% else %}
+            
+            <div class="p-3 text0-center">
+                <a href="{% url 'email_send_again' user.id %}">Отправить письмо повторно</a>
+            </div>
+            
+            <form action="#" class="form-horizontal" method="POST" enctype="multipart/form-data">
+                {{ form.as_table }}
+                
+                {% csrf_token %}
+
+                <button class="btn btn-success btn-rounded mt-3">Сохранить</button>
+            </form>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

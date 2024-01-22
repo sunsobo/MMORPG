@@ -1,0 +1,37 @@
+{% extends 'index/base/base.html' %}
+{% load static %}
+      
+{% block content %}      
+<div class="container">
+    <div class="card mt-5">
+        <div class="card-header">
+            {{ title }}
+        </div>
+        
+        <div class="card-body">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-rounded alert-{% if message.tags == 'error' %}danger{% else %}success{% endif %}" role="alert">
+						{{ message }}
+					</div>
+				<hr>
+                {% endfor %}
+            {% endif %}
+            
+            <form action="#" class="form-horizontal" method="POST">
+                {{ form.as_p }}
+                
+                {% csrf_token %}
+                
+                <button class="btn btn-success btn-rounded mt-3">Зарегистрироваться</button>
+
+            </form>
+        </div>
+        
+        <div class="card-footer" style="font-weight: 600;">
+            Есть аккаунт?
+            <a href="{% url 'user_login' %}">Войти</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

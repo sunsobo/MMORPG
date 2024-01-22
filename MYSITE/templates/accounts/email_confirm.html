@@ -1,0 +1,33 @@
+{% extends 'index/base/base.html' %}
+{% load static %}
+      
+{% block content %}      
+<div class="container">
+    <div class="card mt-5">
+        <div class="card-header">
+            {{ title }}
+        </div>
+        
+        <div class="card-body">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-rounded alert-{% if message.tags == 'error' %}danger{% else %}success{% endif %}" role="alert">
+						{{ message }}
+					</div>
+				<hr>
+                {% endfor %}
+            {% endif %}
+            
+            <div class="alert alert-rounded alert-success text-center" role="alert">
+				<p class="h1"><i class="bi bi-check-circle"></i></p>
+                <p class="h3">Email успешно подтвержден!</p>
+			</div>
+            
+        </div>
+        
+        <div class="card-footer text-center" style="font-weight: 600;">
+            <a href="{% url 'user_login' %}">Войти на сайт</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+2024-01-22 19:27:58,785 ERROR        You're accessing the development server over HTTPS, but it only supports HTTP.
+ /home/dmitry/var/mysite_env/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2024-01-22 19:27:58,802 ERROR        You're accessing the development server over HTTPS, but it only supports HTTP.
+ /home/dmitry/var/mysite_env/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2024-01-22 19:28:00,542 ERROR        You're accessing the development server over HTTPS, but it only supports HTTP.
+ /home/dmitry/var/mysite_env/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2024-01-22 19:28:02,406 ERROR        You're accessing the development server over HTTPS, but it only supports HTTP.
+ /home/dmitry/var/mysite_env/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2024-01-22 19:32:13,916 ERROR        You're accessing the development server over HTTPS, but it only supports HTTP.
+ /home/dmitry/var/mysite_env/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2024-01-22 19:32:15,512 ERROR        You're accessing the development server over HTTPS, but it only supports HTTP.
+ /home/dmitry/var/mysite_env/lib/python3.10/site-packages/django/core/servers/basehttp.py None
